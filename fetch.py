@@ -5,7 +5,7 @@ from datetime import datetime
 from sqlalchemy import create_engine
 
 # Your WeatherAPI key (Replace with your actual key)
-API_KEY = "3ae2a4f45755405796b84806252002"
+API_KEY = os.getenv("WEATHER_API_KEY")
 BASE_URL = "http://api.weatherapi.com/v1/current.json"
 
 # Cities to fetch weather data for
@@ -36,8 +36,7 @@ for city in cities:
 # Convert to DataFrame
 df = pd.DataFrame(weather_data)
 print(df.head())
-
-DATABASE_URL = os.getenv("postgresql://neondb_owner:npg_CWp5zf0ltjKy@ep-delicate-block-a5vh5phh-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require")
+DATABASE_URL = os.getenv("DATABASE_URL")
 # Create engine for Neon.tech PostgreSQL
 engine = create_engine(DATABASE_URL)
 
