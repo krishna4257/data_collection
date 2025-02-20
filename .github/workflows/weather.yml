@@ -2,7 +2,7 @@ name: Fetch Weather Data
 
 on:
   schedule:
-    - cron: '0 22 * * *'  # Runs every day at 10:00 PM UTC (4:00 PM Dallas Time)
+    - cron: '30 22 * * *'  # Runs every day at 10:00 PM UTC (4:30 PM Dallas Time)
 
 jobs:
   fetch-weather:
