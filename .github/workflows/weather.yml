@@ -1,0 +1,26 @@
+name: Fetch Weather Data
+
+on:
+  schedule:
+    - cron: '0 11 * * *'  # Runs every day at 11:00 AM UTC
+
+jobs:
+  fetch-weather:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install Dependencies
+        run: pip install requests pandas sqlalchemy psycopg2-binary
+
+      - name: Run Weather Script
+        env:
+          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python fetch.py
