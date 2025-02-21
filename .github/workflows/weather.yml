@@ -2,7 +2,8 @@ name: Fetch Weather Data
 
 on:
   schedule:
-    - cron: '0 22 * * *'  # Runs every day at 10:00 PM UTC (4:00 PM Dallas Time)
+    - cron: '0 19 * * *'
+  workflow_dispatch:
 
 jobs:
   fetch-weather:
