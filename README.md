@@ -1,8 +1,8 @@
-# Data Collection Project
+# WeatherETL
 
 ## Overview
 
-The **Data Collection Project** is designed to automate the process of fetching weather data from a public API [OpenWeatherMap](https://openweathermap.org/) and storing it in a PostgreSQL database hosted on [Neon.tech](https://neon.tech/). This setup ensures that up-to-date weather information is collected and stored daily for analysis and application development purposes.
+The **WeatherETL** is designed to automate the process of fetching weather data from a public API [OpenWeatherMap](https://openweathermap.org/) and storing it in a PostgreSQL database hosted on [Neon.tech](https://neon.tech/). This setup ensures that up-to-date weather information is collected and stored daily for analysis and application development purposes.
 
 ## Features
 
